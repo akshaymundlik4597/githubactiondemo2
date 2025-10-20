@@ -19,7 +19,7 @@ jobs:
         needs: extract-data-job
         steps:
             - name: checkout code
-              uses: action/checkout@v2
+              uses: actions/checkout@v2
 
             - name: run transform.py
               run: python transform.py
@@ -29,7 +29,7 @@ jobs:
         needs: transform-data-job
         steps:
             - name: checkout code
-              uses: action/checkout@v2
+              uses: actions/checkout@v2
               
             - name: run load.py
               run: python load.py
